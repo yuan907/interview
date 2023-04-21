@@ -1,0 +1,33 @@
+#spring.datasource.url: jdbc:h2:file:./camunda-h2-database
+camunda:
+  bpm:
+    #开启序列化
+    generic-properties:
+      properties:
+        javaserializationFormatEnabled: true
+    #开启监听
+    eventing:
+      execution: true
+      history: true
+      task: true
+    #界面的用户名密码
+    admin-user:
+      id: root
+      password: root
+
+
+server:
+  port: 8100
+
+spring:
+  application:
+    name: spring-boot-camunda-demo
+  datasource:
+    url: jdbc:mysql://localhost:3306/camunda?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&useOldAliasMetadataBehavior=true
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+  servlet:
+    multipart:
+      max-file-size: 2048MB
+      max-request-size: 2048MB
