@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="13" failures="0" name="org.example.stratTest" time="0.691" errors="3" skipped="0">
+<testsuite tests="13" failures="0" name="org.example.stratTest" time="1.117" errors="3" skipped="0">
   <properties>
     <property name="idea.version" value="2022.1.3"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -47,7 +47,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="D:\Program Files\Java\jdk1.8.0_152\jre"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.1.3 -s D:\Program Files\Maven\apache-maven-3.8.6\conf\settings.xml test"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.1.3 -s D:\Program Files\Maven\apache-maven-3.8.6\conf\settings.xml package"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="zh"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -64,11 +64,11 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="org.example.stratTest" name="queryFinishTask" time="0.205"/>
+  <testcase classname="org.example.stratTest" name="queryFinishTask" time="0.294"/>
   <testcase classname="org.example.stratTest" name="queryHistory" time="0.001"/>
-  <testcase classname="org.example.stratTest" name="queryProcessDefinition" time="0.01"/>
-  <testcase classname="org.example.stratTest" name="getTaskListByTaskID" time="0.016"/>
-  <testcase classname="org.example.stratTest" name="testStart" time="0.018">
+  <testcase classname="org.example.stratTest" name="queryProcessDefinition" time="0.019"/>
+  <testcase classname="org.example.stratTest" name="getTaskListByTaskID" time="0.018"/>
+  <testcase classname="org.example.stratTest" name="testStart" time="0.026">
     <error message="no deployed process definition found with id &apos;Process_1n6xfcx:2:e5eb2aae-c167-11ed-a97c-080058000005&apos;: processDefinition is null" type="org.camunda.bpm.engine.exception.NullValueException">org.camunda.bpm.engine.exception.NullValueException: no deployed process definition found with id &apos;Process_1n6xfcx:2:e5eb2aae-c167-11ed-a97c-080058000005&apos;: processDefinition is null
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -137,7 +137,7 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </error>
-    <system-out>2023-04-21 10:57:39.346 ERROR 6820 --- [           main] org.camunda.bpm.engine.context           : ENGINE-16004 Exception while closing command context: no deployed process definition found with id &apos;Process_1n6xfcx:2:e5eb2aae-c167-11ed-a97c-080058000005&apos;: processDefinition is null
+    <system-out>2023-04-23 15:59:05.140 ERROR 31552 --- [           main] org.camunda.bpm.engine.context           : ENGINE-16004 Exception while closing command context: no deployed process definition found with id &apos;Process_1n6xfcx:2:e5eb2aae-c167-11ed-a97c-080058000005&apos;: processDefinition is null
 
 org.camunda.bpm.engine.exception.NullValueException: no deployed process definition found with id &apos;Process_1n6xfcx:2:e5eb2aae-c167-11ed-a97c-080058000005&apos;: processDefinition is null
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_152]
@@ -159,7 +159,7 @@ org.camunda.bpm.engine.exception.NullValueException: no deployed process definit
 	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:28) ~[camunda-engine-7.13.0.jar:7.13.0]
 	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:110) ~[camunda-engine-7.13.0.jar:7.13.0]
 	at org.camunda.bpm.engine.spring.SpringTransactionInterceptor$1.doInTransaction(SpringTransactionInterceptor.java:46) [camunda-engine-spring-7.13.0.jar:7.13.0]
-	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) [spring-tx-5.3.16.jar:5.3.16]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) [spring-tx-5.3.13.jar:5.3.13]
 	at org.camunda.bpm.engine.spring.SpringTransactionInterceptor.execute(SpringTransactionInterceptor.java:44) [camunda-engine-spring-7.13.0.jar:7.13.0]
 	at org.camunda.bpm.engine.impl.interceptor.ProcessApplicationContextInterceptor.execute(ProcessApplicationContextInterceptor.java:70) [camunda-engine-7.13.0.jar:7.13.0]
 	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:33) [camunda-engine-7.13.0.jar:7.13.0]
@@ -176,24 +176,24 @@ org.camunda.bpm.engine.exception.NullValueException: no deployed process definit
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.13.1.jar:4.13.1]
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56) [junit-4.13.1.jar:4.13.1]
 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.13.1.jar:4.13.1]
-	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74) [spring-test-5.3.16.jar:5.3.16]
-	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84) [spring-test-5.3.16.jar:5.3.16]
-	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-5.3.16.jar:5.3.16]
-	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-5.3.16.jar:5.3.16]
-	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-5.3.16.jar:5.3.16]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-5.3.13.jar:5.3.13]
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366) [junit-4.13.1.jar:4.13.1]
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) [spring-test-5.3.16.jar:5.3.16]
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.3.16.jar:5.3.16]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.3.13.jar:5.3.13]
 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331) [junit-4.13.1.jar:4.13.1]
 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79) [junit-4.13.1.jar:4.13.1]
 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329) [junit-4.13.1.jar:4.13.1]
 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66) [junit-4.13.1.jar:4.13.1]
 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293) [junit-4.13.1.jar:4.13.1]
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.3.16.jar:5.3.16]
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.3.16.jar:5.3.16]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.3.13.jar:5.3.13]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.3.13.jar:5.3.13]
 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306) [junit-4.13.1.jar:4.13.1]
 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413) [junit-4.13.1.jar:4.13.1]
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.3.16.jar:5.3.16]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.3.13.jar:5.3.13]
 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252) [surefire-junit4-2.12.4.jar:2.12.4]
 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141) [surefire-junit4-2.12.4.jar:2.12.4]
 	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112) [surefire-junit4-2.12.4.jar:2.12.4]
@@ -209,7 +209,7 @@ org.camunda.bpm.engine.exception.NullValueException: no deployed process definit
 
 </system-out>
   </testcase>
-  <testcase classname="org.example.stratTest" name="testTask" time="0.011">
+  <testcase classname="org.example.stratTest" name="testTask" time="0.018">
     <error message="没有流程实例！" type="java.lang.RuntimeException">java.lang.RuntimeException: 没有流程实例！
 	at org.example.stratTest.testTask(stratTest.java:124)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -252,8 +252,8 @@ org.camunda.bpm.engine.exception.NullValueException: no deployed process definit
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </error>
   </testcase>
-  <testcase classname="org.example.stratTest" name="queryGroup" time="0.013"/>
-  <testcase classname="org.example.stratTest" name="test" time="0.007">
+  <testcase classname="org.example.stratTest" name="queryGroup" time="0.015"/>
+  <testcase classname="org.example.stratTest" name="test" time="0.01">
     <error message="Index: 0, Size: 0" type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
 	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
 	at java.util.ArrayList.get(ArrayList.java:433)
@@ -298,9 +298,9 @@ org.camunda.bpm.engine.exception.NullValueException: no deployed process definit
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </error>
   </testcase>
-  <testcase classname="org.example.stratTest" name="deleteProcessDefinition" time="0.021"/>
-  <testcase classname="org.example.stratTest" name="testCreateBpmn" time="0.341"/>
-  <testcase classname="org.example.stratTest" name="testGetDeploy" time="0.007"/>
-  <testcase classname="org.example.stratTest" name="testDeploy" time="0.035"/>
-  <testcase classname="org.example.stratTest" name="queryTaskList" time="0.006"/>
+  <testcase classname="org.example.stratTest" name="deleteProcessDefinition" time="0.038"/>
+  <testcase classname="org.example.stratTest" name="testCreateBpmn" time="0.54"/>
+  <testcase classname="org.example.stratTest" name="testGetDeploy" time="0.009"/>
+  <testcase classname="org.example.stratTest" name="testDeploy" time="0.124"/>
+  <testcase classname="org.example.stratTest" name="queryTaskList" time="0.005"/>
 </testsuite>

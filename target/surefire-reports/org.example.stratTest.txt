@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: org.example.stratTest
 -------------------------------------------------------------------------------
-Tests run: 13, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 7.132 sec <<< FAILURE!
-testStart(org.example.stratTest)  Time elapsed: 0.018 sec  <<< ERROR!
+Tests run: 13, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 8.184 sec <<< FAILURE!
+testStart(org.example.stratTest)  Time elapsed: 0.026 sec  <<< ERROR!
 org.camunda.bpm.engine.exception.NullValueException: no deployed process definition found with id 'Process_1n6xfcx:2:e5eb2aae-c167-11ed-a97c-080058000005': processDefinition is null
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -71,7 +71,7 @@ org.camunda.bpm.engine.exception.NullValueException: no deployed process definit
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-testTask(org.example.stratTest)  Time elapsed: 0.011 sec  <<< ERROR!
+testTask(org.example.stratTest)  Time elapsed: 0.018 sec  <<< ERROR!
 java.lang.RuntimeException: 没有流程实例！
 	at org.example.stratTest.testTask(stratTest.java:124)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -113,7 +113,7 @@ java.lang.RuntimeException: 没有流程实例！
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-test(org.example.stratTest)  Time elapsed: 0.007 sec  <<< ERROR!
+test(org.example.stratTest)  Time elapsed: 0.01 sec  <<< ERROR!
 java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
 	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
 	at java.util.ArrayList.get(ArrayList.java:433)
