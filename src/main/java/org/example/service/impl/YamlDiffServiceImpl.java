@@ -30,10 +30,10 @@ public class YamlDiffServiceImpl implements YamlDiffService {
     private static final Logger logger = LoggerFactory.getLogger(YamlDiffServiceImpl.class);
 
 
-    private String url = "192.168.0.101";
+    private String url = "192.168.52.129";
     private int port = 21;
-    private String username = "root";
-    private String password = "Admin@123";
+    private String username = "test";
+    private String password = "test";
 
     private String oldUrl = "C:/Users/Administrator/Desktop/test/old";
     private String newUrl = "C:/Users/Administrator/Desktop/test/new";

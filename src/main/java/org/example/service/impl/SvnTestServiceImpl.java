@@ -20,9 +20,10 @@ public class SvnTestServiceImpl implements SvnTestService {
 
     private static final String workSpace="";
 
+//    ClassLoader
 
 
-    @Override
+//    @Override
     public void testSvnUpload(MultipartFile multipartFile) throws SVNException {
 //        File uploadFile = null;
 //        try {
